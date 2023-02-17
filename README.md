@@ -142,7 +142,7 @@ gsap.timeline().to("target", {vars}, "position param")
 <div class="target">hello</div>
 ```
 ```javascript
-let controls = gsap.to("target", {duration:3, x600, ease: "linear", paused:true})
+let controls = gsap.to("target", {duration:3, x:600, ease: "linear", paused:true})
 document.getElementById("play").onclick = () => controls.play()
 document.getElementById("pause").onclick = () => controls.pause()
 document.getElementById("reverse").onclick = () => controls.reverse()

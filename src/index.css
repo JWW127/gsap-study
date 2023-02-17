@@ -1,9 +1,11 @@
 html {
    box-sizing: border-box; 
+    padding: 0;
 }
 
 body {
     background-color: ivory;
+    margin: 0;
 }
 
 .app {
@@ -11,11 +13,35 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border-bottom: 4px dotted red;
     width: 100vw;
     gap: 2rem;
     margin-top: 1rem;
-    padding: 1rem;
+    height: 36vh;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    gap: 2;
+    border-bottom: 2px solid gray;
+    width: 100vw;
+    flex-basis: 100%;
+    padding: 2rem;
+    background-color:darkslateblue;
+}
+
+a {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: bold;
+    color: white;
+}
+
+li {
+    list-style: none;
 }
 
 .one {
@@ -72,8 +98,9 @@ h1 {
 
 pre {
     flex-basis: 100%;
+    text-align: left;
     color: navy;
-    font-weight: bold;
+    font-size: 110%;
+    font-weight: bolder;
 }
-
 
