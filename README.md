@@ -17,7 +17,7 @@ The basic syntax for a to() tween is as follows:
 
 `gsap.to(".fred", {x:400});`
 <div>
-Animates the element with a class of “fred” to an x position of 400.
+Animates the element with a class of “fred” to an x position of 400. <br/>
 If you do not specify a duration, gsap will use the default which is 0.5 seconds (500ms).
 
 You can change the default duration using:
@@ -52,7 +52,9 @@ For best performance animate CSS Transform values and opacity:
 </ul>
 </div>
 
+```diff
 ! Changing values that are not CSS Transforms or opacity can cause the browser to re-do its layout of the page which in extreme situations can hinder performance. For a few tweens, it’s not the end of the world as some purists make it out to be. 
+```
 
 ## to() from() fromTo()
 ```javascript
@@ -64,17 +66,17 @@ gsap.fromTo("target", {starting vars}, {ending vars, duration:1}) -both your sta
 ## special properties
 
 `duration: number`
-    - number of secods for animation to finish, default: .5
+    - number of secods for animation to finish, default: .5 <br/>
 `repeat: number`
-    - number of times to repeat animation, set -1 for infinite
+    - number of times to repeat animation, set -1 for infinite <br/>
 `delay: number`
-    - number of seconds to delay after load to start animation
+    - number of seconds to delay after load to start animation <br/>
 `repeatDelay: number`
-    - number of seconds delay between repeats
+    - number of seconds delay between repeats <br/>
 `yoyo: boolean`
-    - set animation to play in forward then reverse for every repeat
+    - set animation to play in forward then reverse for every repeat <br/>
 `paused: boolean`
-    - set animation to start off paused
+    - set animation to start off paused <br/>
 ## ease properties
 ```
 ease: "bounce.in | out | inOut"
@@ -99,14 +101,15 @@ EXAMPLE
 gsap.to("targets", {scale: 1, stagger: {amount: 5, from: "center", ease: "power2"}})
 ```
 `stagger: {each: 0-1}`
-    - time between each element start
+    - time between each element start <br/>
 `stagger: {amount: number}`
-    - total time split between all elements
+    - total time split between all elements <br/>
 `stagger: {from: string}`
-    - indicates starting location "end", "center", "edges" default is front
+    - indicates starting location "end", "center", "edges" default is front <br/>
 `stagger: {ease: string, amount: number}`
-    - ease + amount to define a curved stagger animation
+    - ease + amount to define a curved stagger animation <br/>
 ## add controls 
+
 ```html
 <button id="play">play</button>
 <button id="pause">pause</button>
