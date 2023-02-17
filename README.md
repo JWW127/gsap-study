@@ -115,6 +115,23 @@ gsap.to("targets", {scale: 1, stagger: {amount: 5, from: "center", ease: "power2
     - indicates starting location "end", "center", "edges" default is front <br/>
 `stagger: {ease: string, amount: number}`
     - ease + amount to define a curved stagger animation <br/>
+
+## position parameter with timelines
+timelines have an additional parameter
+```javascript
+gsap.timeline().to("target", {vars}, "position param")
+```
+`+=1`
+    - start 1 second after previous animation ends <br/>
+`-=1`
+    - start 1 second before previous animation ends <br/>
+`<`
+    - start when previous starts <br/>
+`<1`
+    - start 1 second after previous starts <br/>
+`2`
+    - start exactly at 2s <br/>
+
 ## add controls 
 
 ```html
