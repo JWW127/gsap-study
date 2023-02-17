@@ -21,10 +21,14 @@ The basic syntax for a to() tween is as follows:
 Animates the element with a class of “fred” to an x position of 400. <br/>
 If you do not specify a duration, gsap will use the default which is 0.5 seconds (500ms).
 
-You can change the default duration using:
 </div>
 
+You can change the default duration
 `gsap.defaults({duration:1});`
+
+Set absolute condition (scale in example)
+`gsap.set("target", {scale: 0.8})`
+
 <div>
 Behind the scenes gsap changes the target’s inline style during the animation.
 </div>
@@ -32,7 +36,9 @@ For best performance animate CSS Transform values and opacity:
 <div>
 <ul>
 <li>x</li>
+<li>xPercent</li>
 <li>y</li>
+<li>yPercent</li>
 <li>rotation</li>
 <li>rotationX</li>
 <li>rotationY</li>
@@ -127,3 +133,21 @@ document.getElementById("restart").onclick = () => controls.restart()
 ```
 can be used to add quick and dirty controls to work with project
 ***
+## react gsap component basics
+```javascript
+export const Component = () => {
+    const root = useRef(null);
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.to(".target", { duration: 1, x: 50 })
+        }, root)
+
+        return () => ctx.revert()
+    }, [])
+
+    return (
+        <div ref={root} className="app">
+            <div className="target">Target</div>
+        </div>
+```
