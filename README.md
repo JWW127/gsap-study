@@ -23,10 +23,10 @@ If you do not specify a duration, gsap will use the default which is 0.5 seconds
 
 </div>
 
-You can change the default duration
+You can change the default duration <br/>
 `gsap.defaults({duration:1});`
 
-Set absolute condition (scale in example)
+Set absolute condition (scale in example) <br/>
 `gsap.set("target", {scale: 0.8})`
 
 <div>
