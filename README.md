@@ -11,118 +11,102 @@ This is inteded on being a deep dive study of GSAP in combination with React.
 
 You can get started with GSAP and React @ [GSAP](https://greensock.com/react/)
 
-# CCC - Notes
-# Basic Tween(between)
+## CCC - Notes
+## Basic Tween(between)
 The basic syntax for a to() tween is as follows:
 
-***
-gsap.to(".fred", {x:400}); 
-===
+`gsap.to(".fred", {x:400});`
+<div>
 Animates the element with a class of “fred” to an x position of 400.
 If you do not specify a duration, gsap will use the default which is 0.5 seconds (500ms).
 
 You can change the default duration using:
+</div>
 
-gsap.defaults({duration:1});
-===
+`gsap.defaults({duration:1});`
+<div>
 Behind the scenes gsap changes the target’s inline style during the animation.
-*** 
+</div>
 For best performance animate CSS Transform values and opacity:
-===
-x
-y
-rotation
-rotationX
-rotationY
-skewX and skewY
-scaleX, scaleY, or just scale
+<div>
+<ul>
+<li>x</li>
+<li>y</li>
+<li>rotation</li>
+<li>rotationX</li>
+<li>rotationY</li>
+<li>skewX and skewY</li>
+<li>scaleX, scaleY, or just scale</li>
+</ul>
+</div>
 
-***
-GSAP can animate any numeric property you throw at it.
-===
-width and height
-backgroundColor *hyphenated values need to be camelCase
-color
-padding
-left and top (must set position to relative, absolute, or fixed)
-vh and vw
+<h2>GSAP can animate any numeric property you throw at it.</h2>
+<div>
+<ul>
+<li>width and height</li>
+<li>backgroundColor *hyphenated values need to be camelCase</li>
+<li>color</li>
+<li>padding</li>
+<li>left and top (must set position to relative, absolute, or fixed)</li>
+<li>vh and vw</li>
+</ul>
+</div>
 
-***
-Changing values that are not CSS Transforms or opacity can cause the browser to re-do its layout of the page which in extreme situations can hinder performance. For a few tweens, it’s not the end of the world as some purists make it out to be. 
-===
+! Changing values that are not CSS Transforms or opacity can cause the browser to re-do its layout of the page which in extreme situations can hinder performance. For a few tweens, it’s not the end of the world as some purists make it out to be. 
 
-# to() from() fromTo()
+## to() from() fromTo()
+```javascript
 gsap.to("target", {vars})  -this is the destination
-***
 gsap.from("target", {vars}) -this is your starting point
-***
 gsap.fromTo("target", {starting vars}, {ending vars, duration:1}) -both your start and end
+```
 
-# special properties
+## special properties
 
-duration: number
+`duration: number`
     - number of secods for animation to finish, default: .5
-***
-repeat: number
+`repeat: number`
     - number of times to repeat animation, set -1 for infinite
-***
-delay: number
+`delay: number`
     - number of seconds to delay after load to start animation
-***
-repeatDelay: number
+`repeatDelay: number`
     - number of seconds delay between repeats
-***
-yoyo: boolean
+`yoyo: boolean`
     - set animation to play in forward then reverse for every repeat
-***
-paused: boolean
+`paused: boolean`
     - set animation to start off paused
-# ease properties
-*** 
+## ease properties
+```
 ease: "bounce.in | out | inOut"
-***
 ease: "power0" 
-***
 ease: "power1.in | out | inOut"
-***
 ease: "power2.in | out | inOut"
-***
 ease: "power3.in | out | inOut"
-***
 ease: "back.in | out | inOut(strength: number)"
-***
 ease: "elastic.in | out | inOut(strength: number, elasticity: 0-1)"
-***
 ease: "slow(center: 0-1, edges: 0-1, mirror: bool)"
-***
 ease: "steps(number: >=1)"
-***
 ease: "circle.in | out | inOut"
-***
 ease: "expo.in | out | inOut"
-***
 ease: "sine.in | out | inOut"
-***
-visual examples https://greensock.com/docs/v3/Eases?ref=6234
-# stagger properties
-gsap.to("multipleTargets", {stagger: {staggerVars}})
----
+```
+[visual examples](https://greensock.com/docs/v3/Eases?ref=6234)
+## stagger properties
+`gsap.to("multipleTargets", {stagger: {staggerVars}})`
+
 EXAMPLE
+```javascript
 gsap.to("targets", {scale: 1, stagger: {amount: 5, from: "center", ease: "power2"}})
----
-***
-stagger: {each: 0-1}
+```
+`stagger: {each: 0-1}`
     - time between each element start
-***
-stagger: {amount: number}
+`stagger: {amount: number}`
     - total time split between all elements
-***
-stagger: {from: string}
+`stagger: {from: string}`
     - indicates starting location "end", "center", "edges" default is front
- ***
-stagger: {ease: string, amount: number}
+`stagger: {ease: string, amount: number}`
     - ease + amount to define a curved stagger animation
-# add controls 
+## add controls 
 ```html
 <button id="play">play</button>
 <button id="pause">pause</button>
@@ -137,4 +121,5 @@ document.getElementById("pause").onclick = () => controls.pause()
 document.getElementById("reverse").onclick = () => controls.reverse()
 document.getElementById("restart").onclick = () => controls.restart()
 ```
-
+can be used to add quick and dirty controls to work with project
+***
