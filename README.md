@@ -1,6 +1,6 @@
 <div align="center">
 <h1>GSAP Study</h1>
-<img src="./gsap-logo.gif" alt="gsap-logo">
+<img src="./public/gsap-logo.gif" alt="gsap-logo">
 </div>
 <hr/>
 
