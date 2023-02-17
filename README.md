@@ -11,7 +11,7 @@ This is inteded on being a deep dive study of GSAP in combination with React.
 
 You can get started with GSAP and React @ [GSAP](https://greensock.com/react/)
 
-## CCC - Notes
+## Notes
 ## Basic Tween(between)
 The basic syntax for a to() tween is as follows:
 

@@ -2,15 +2,20 @@ html {
    box-sizing: border-box; 
 }
 
+body {
+    background-color: ivory;
+}
+
 .app {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border: 1px solid red;
-    height: 100vh;
+    border-bottom: 2px dotted red;
     width: 100vw;
-    gap: 3rem;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
 }
 
 .one {
@@ -37,5 +42,38 @@ html {
     font-weight: 800;
 }
 
+.four {
+    border: 1px solid red;
+    color: darkcyan;
+    font-size: 200%;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+.five {
+    border: 1px solid red;
+    color: lime;
+    font-size: 200%;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+.six {
+    border: 1px solid red;
+    color: magenta;
+    font-size: 200%;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+h1 {
+    margin-right: 2rem;
+}
+
+pre {
+    flex-basis: 100%;
+    color: navy;
+    font-weight: bold;
+}
 
 
