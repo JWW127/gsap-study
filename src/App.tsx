@@ -12,9 +12,9 @@ function App() {
             <>
                 <Nav />
                 <Routes>
-                    <Route path="/" element={<To/>}/>
-                    <Route path="/1" element={<To/>}/>
-                    <Route path="/2" element={<Timeline/>}/>
+                    <Route path="/" element={<To />} />
+                    <Route path="/1" element={<To />} />
+                    <Route path="/2" element={<Timeline />} />
                 </Routes>
             </>
         </BrowserRouter>

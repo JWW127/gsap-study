@@ -4,33 +4,63 @@ html {
 }
 
 body {
-    background-color: ivory;
     margin: 0;
+    background-image: linear-gradient(
+        180deg,
+        hsl(240deg 2% 75%) 0%,
+        hsl(295deg 3% 75%) 9%,
+        hsl(340deg 7% 75%) 18%,
+        hsl(5deg 11% 76%) 27%,
+        hsl(22deg 14% 75%) 36%,
+        hsl(40deg 13% 73%) 45%,
+        hsl(68deg 7% 66%) 55%,
+        hsl(95deg 5% 55%) 64%,
+        hsl(128deg 5% 44%) 73%,
+        hsl(152deg 8% 33%) 82%,
+        hsl(168deg 14% 22%) 91%,
+        hsl(180deg 27% 12%) 100%
+        );
 }
 
 .app {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    align-content: start;
+    padding-top: 5rem;
     flex-wrap: wrap;
     width: 100vw;
     gap: 2rem;
-    margin-top: 1rem;
-    height: 36vh;
+    height: 100vh;
 }
 
 .nav-container {
+    position: relative;
+    top: -16px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     justify-self: center;
     flex-wrap: wrap;
     gap: 2;
-    border-bottom: 2px solid gray;
     width: 100vw;
     flex-basis: 100%;
     padding: 2rem;
-    background-color:darkslateblue;
+    background-image: linear-gradient(
+        245deg,
+        hsl(240deg 41% 15%) 0%,
+        hsl(248deg 35% 15%) 9%,
+        hsl(254deg 30% 15%) 18%,
+        hsl(260deg 24% 15%) 27%,
+        hsl(265deg 19% 16%) 36%,
+        hsl(271deg 13% 16%) 45%,
+        hsl(255deg 11% 16%) 55%,
+        hsl(225deg 15% 16%) 64%,
+        hsl(210deg 22% 15%) 73%,
+        hsl(200deg 28% 14%) 82%,
+        hsl(191deg 30% 13%) 91%,
+        hsl(180deg 27% 12%) 100%
+        );
 }
 
 a {
@@ -98,9 +128,9 @@ h1 {
 
 pre {
     flex-basis: 100%;
-    text-align: left;
     color: navy;
-    font-size: 110%;
-    font-weight: bolder;
+    font-size: 140%;
+    font-weight: 900;
+    margin: 2rem;
 }
 

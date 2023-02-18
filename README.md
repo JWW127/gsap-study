@@ -139,13 +139,18 @@ gsap.timeline().to("target", {vars}, "position param")
 <button id="pause">pause</button>
 <button id="reverse">reverse</button>
 <button id="restart">restart</button>
+<button id="test">text</button>
 <div class="target">hello</div>
 ```
 ```javascript
-let controls = gsap.to("target", {duration:3, x:600, ease: "linear", paused:true})
+let controls = gsap
+                .timeline().to("target", {duration:3, x:600, ease: "linear", paused:true})
+                .add("test") // <-- our 'test' button will jump animation here
+                .to("target", {duration:3, x:600, ease: "linear", paused:true})
 document.getElementById("play").onclick = () => controls.play()
 document.getElementById("pause").onclick = () => controls.pause()
 document.getElementById("reverse").onclick = () => controls.reverse()
+document.getElementById("test").onclick = () => controls.play("test") //use test for exact time
 document.getElementById("restart").onclick = () => controls.restart()
 ```
 can be used to add quick and dirty controls to work with project
