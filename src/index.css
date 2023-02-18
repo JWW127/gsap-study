@@ -68,6 +68,21 @@ a {
     font-size: 120%;
     font-weight: bold;
     color: white;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+a:hover {
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+a:active {
+    color: crimson;
+    border: 1px solid crimson;
 }
 
 li {
@@ -117,6 +132,30 @@ li {
 .six {
     border: 1px solid red;
     color: magenta;
+    font-size: 200%;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+.seven {
+    border: 1px solid red;
+    color: orangered;
+    font-size: 200%;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+.eight {
+    border: 1px solid red;
+    color: purple;
+    font-size: 200%;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+.nine {
+    border: 1px solid red;
+    color: green;
     font-size: 200%;
     padding: 1rem;
     font-weight: 800;

@@ -21,7 +21,8 @@ export const Timeline = () => {
                 .to(".six", { duration: 1, x: 0, ease: "back" })
 
         }, timelineRoot)
-        return () => ctx.revert()
+        // the following line cleansup code, you can even add event listeners
+        return () => { ctx.revert() }
 
     }, [])
 

@@ -172,4 +172,5 @@ export const Component = () => {
         <div ref={root} className="app">
             <div className="target">Target</div>
         </div>
+    )
 ```
