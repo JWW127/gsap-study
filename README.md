@@ -117,10 +117,11 @@ gsap.to("targets", {scale: 1, stagger: {amount: 5, from: "center", ease: "power2
     - ease + amount to define a curved stagger animation <br/>
 
 ## position parameter with timelines
-timelines have an additional parameter
+timelines allow us to chain tweens together
 ```javascript
-gsap.timeline().to("target", {vars}, "position param")
+gsap.timeline().to("target", {vars}, "timeline positions params")
 ```
+<h4>example timeline position params</h4>
 `+=1`
     - start 1 second after previous animation ends <br/>
 `-=1`
@@ -131,6 +132,11 @@ gsap.timeline().to("target", {vars}, "position param")
     - start 1 second after previous starts <br/>
 `2`
     - start exactly at 2s <br/>
+```javascript
+//timelines themselves can have args. https://greensock.com/docs/v3/GSAP/Timeline
+gsap.timeline({default:{vars}}).to("target", {vars}, "position params")
+//defaults are applied to all chained tweens, unless conflict then tween will override default
+```
 
 ## add controls 
 
@@ -154,7 +160,11 @@ document.getElementById("test").onclick = () => controls.play("test") //use test
 document.getElementById("restart").onclick = () => controls.restart()
 ```
 can be used to add quick and dirty controls to work with project
-***
+
+```diff
+! GSAP offers a dev tools although its not free.
+adding ' GSDevTools.create() ' will pin it to the bottom of working animation
+```
 ## react gsap component basics
 ```javascript
 export const Component = () => {

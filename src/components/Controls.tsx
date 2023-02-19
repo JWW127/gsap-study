@@ -1,5 +1,5 @@
 interface ControlProps {
-   target: gsap.core.Timeline
+    target: gsap.core.Timeline
 }
 
 export const Controls = (props: ControlProps) => {
@@ -15,3 +15,4 @@ export const Controls = (props: ControlProps) => {
         </div>
     )
 }
+
