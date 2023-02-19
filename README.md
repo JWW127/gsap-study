@@ -172,6 +172,9 @@ export const Component = () => {
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
+                //put all your animations here
+            gsap.to(".target", { duration: 1, x: 50 })
+            gsap.to(".target", { duration: 1, x: 50 })
             gsap.to(".target", { duration: 1, x: 50 })
         }, root)
 
@@ -183,4 +186,23 @@ export const Component = () => {
             <div className="target">Target</div>
         </div>
     )
+```
+
+## keyframes
+keyframes are really good for fine grained animation detail
+```javascript
+gsap.timeline()
+    .to(".ten", {
+        keyframes: {
+            "10%": {vars},
+            "15%": {vars},
+            "25%": {vars},
+            "35%": {vars},
+            "55%": {vars},
+            "75%": {vars},
+            "99.99%": {vars},
+            "100%": {vars}
+        },
+        duration: 5
+    })
 ```

@@ -4,6 +4,8 @@ import { Timeline } from './components/Timeline'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import { AnimateViaProps } from './components/AnimateViaProps'
+import { Testing } from './components/Testing'
+import {Keyframes} from './components/Keyframes'
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
                     <Route path="/1" element={<To />} />
                     <Route path="/2" element={<Timeline />} />
                     <Route path="/3" element={<AnimateViaProps />} />
+                    <Route path="/4" element={<Keyframes />} />
+                    <Route path="/testing" element={<Testing />} />
                 </Routes>
             </>
         </BrowserRouter>

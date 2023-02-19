@@ -71,6 +71,7 @@ a {
     border: 1px solid transparent;
     border-radius: 6px;
     padding: 1rem;
+    transition-duration: 100ms;
 }
 
 a:hover {
@@ -161,6 +162,40 @@ li {
     font-weight: 800;
 }
 
+.ten {
+    border: 1px solid red;
+    color: green;
+    font-size: 200%;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+.eleven {
+    border: 1px solid red;
+    color: orange;
+    font-size: 200%;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+.twelve {
+    border: 1px solid red;
+    color: green;
+    font-size: 200%;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+
+.testing {
+    border: 1px solid red;
+    color: green;
+    font-size: 200%;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+
 h1 {
     margin-right: 2rem;
 }
@@ -172,4 +207,13 @@ pre {
     font-weight: 900;
     margin: 2rem;
 }
+
+.presmall {
+    flex-basis: 100%;
+    color: navy;
+    font-size: 100%;
+    font-weight: 900;
+    margin: 2rem;
+}
+
 

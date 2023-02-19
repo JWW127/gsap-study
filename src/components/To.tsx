@@ -11,7 +11,6 @@ export const To = () => {
             gsap.from(".two", { y: 200, rotation: 180 })
             gsap.fromTo(".three", { x: -50, y: -50 }, { x: 0, y: 0, duration: 2 })
         }, root)
-
         // the following line cleansup code, you can even add event listeners
         return () => { ctx.revert() }
     }, [])
@@ -29,5 +28,4 @@ export const To = () => {
 `}</pre>
         </div>
     )
-
 }

@@ -22,7 +22,22 @@ const Nav = () => {
                     <Link to="/3">
                         <span>
                         </span>
-                        Reusable & Props
+                        reusable & props
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/4">
+                        <span>
+                        </span>
+                        keyframes
+                    </Link>
+                </li>
+
+                <li>
+                    <Link to="/testing">
+                        <span>
+                        </span>
+                        Testing
                     </Link>
                 </li>
             </ul>
