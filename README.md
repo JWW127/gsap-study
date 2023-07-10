@@ -10,7 +10,8 @@ This is inteded on being a deep dive study of GSAP in combination with React.
 
 ## Install
 
-You can get started with GSAP and React @ [GSAP](https://greensock.com/react/)
+You can get started with GSAP and React @ [GSAP](https://greensock.com/react/) <br/>
+Visit my [DEMO](https://gssap-study.netlify.com) site.
 
 ## Notes
 ## Basic Tween(between)
